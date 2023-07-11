@@ -1,48 +1,35 @@
-# Hello World with Vanilla JS
+# </> Random Card Generator
 
-Start coding a JS/HTML/CSS website in 30 seconds by opening this template in [Codespaces](https://github.com/codespaces/new/?repo=4GeeksAcademy/vanillajs-hello) or [Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/vanillajs-hello.git).
+In this project, you will learn how to change your website styles during the runtime using VanillaJS (plain normal js).
 
-## Before you begin
+📝 Instructions
+Create an algorithm that randomly builds a card on every refresh:
 
-Install the packages by typing: `npm install`.
+Every time the website refreshes a new random card needs to show.
 
+The card must have one of the possible suits: Hearts, Spades, Clubs and Diamonds.
 
-### How do I run my website to see live changes?  
+The card value must be one of the following: 2 to 10, King, Queen, Jack or Ace, (no joker).
 
+## 😎 Feeling Confident?
+The following requirements are not needed to successfully finish this project, but you can try and challenge yourself!
 
-Type on the command line `$ npm run start` and type localhost on the browser.
++1 Add a button that generates a new card when clicked.
 
-### Where do I write my code?  
++1 Add a timer that generates a new card every 10 seconds.
 
-It depends on the language, but you have `./src/app.js`, `./src/style.css` and `./src/index.html` respectively, you can add new `.html` as you please, just make sure to import it on the `app.js`.
++1 Allow the user to specify the card width and height using text inputs.
 
-> Note: remember that the JS workflow starts inside `window.onload`.
+##💡 Hints
+Remember that the first event of a website lifecycle is onLoad (your code starts running there). You should generate a random number between 1 and 4 to pick a suit and another random number between 0 and 12 to pick a card number.
 
+Create a general .card class that applies the general styles to each card, and one additional CSS class for each suit: .spade, .club, .heart & .diamond.
 
-## Troubleshooting
+Apply the .card class to the entire div, but only apply one of the suit classes at a time, depending on what suit you want to apply. For example, a 3 of Hearts will have this HTML declaration:
 
-### I don't see my changes...
+    <div class='card heart'></div>
 
-Everytime you change any file inside the `./src` folder the website's public URL will automatically refresh the changes (it's a process called hot deploy)
-Remember also to refresh cleaning the cache (`command+shift+r` on Mac, `control+shift+r` on PC & Linux)
-
-### How do I include more images in my project?
-
-Add them inside the `./src/assets/img` folder and import them from any of your JS files. E.g: `import "../assets/img/rigo-baby.jpg";`
-
-### How do I include more JS files?
-
-Just add the files into the src folder and import the file/variables into your app.js. E.g: `import myVar from "./file2.js"`
-
-### How do I publish the website?
-
-This boilerplate is 100% compatible with the free GitHub pages hosting. Publish your website by running:
-
-```bash
-$ npm run deploy
-```
-
-Very easy and in just one step!  Push to your __main__ branch and use the free hosting that comes with [GitHub pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages), the project is ready to be published. Remember to choose to run the Github Page from your main branch.
+You can grab the icons from here (copy and paste into your code): ♦ ♥ ♠ ♣
 
 ### Thank you
 
